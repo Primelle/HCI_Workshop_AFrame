@@ -9,38 +9,56 @@
   </head>
   <body>
     <a-scene background="color: #333333">
+
+      <a-camera position="0 2 15" user-height="0"></a-camera>
+
       <a-assets>
           <img id="wood" src="images/wood.jpg" />
           <img id="wood2" src="images/wood2.jpg" />
           <img id="grass" src="images/grass.jpg" />
       </a-assets>
-      <a-box id="myBox" 
-        position="-1 1 -3" 
-        rotation="0 45 0" 
-        width="3" 
-        height="1" 
-        depth="1"
-        color="#8667F6" 
 
-        
-        shadow 
-        animation="property: rotation; 
-                   to: 90 360 180; 
-                   dur: 2000; 
-                   easing: linear; 
-                   loop: true" >
-                   <!--material="src: #wood"-->
-      </a-box>
+
+
+      <a-entity position="0 2 0"
+      animation="
+        property:rotation;
+        to: 0 360 100;
+        dur:3000;
+        loop:true;
+        easing:easeInOutBack;
+        "
+        >
+
+        <a-box id="myBox" position="4 0 0" material="src:#wood"></a-box>
+      </a-entity>
+
+      <a-entity position="0 6 0"
+      animation="
+        property:rotation;
+        to: 0 360 100;
+        dur:3000;
+        loop:true;
+        easing:easeInOutBack;
+
+        "
+        >
+
+        <a-box id="myBoxTwo" color="green" position="-4 0 0" material="src:#wood">
+
+        </a-box>
+      </a-entity>
+
       <a-box id="myOtherBox" 
-        position="2 1 -3" 
+        position="0 4 0" 
         rotation="0 45 0" 
         width="3" 
         height="1" 
         depth="1" 
-        color="#ffffff"
+        material="src: #wood2"
         shadow>  
-        <!--material="src: #wood2"-->
       </a-box>
+
       <a-plane id="ground"
         position="0 0 -4" 
         rotation="-90 0 0" 
