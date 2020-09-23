@@ -18,6 +18,6 @@ setInterval(spin, 16);
  });
 
  myOtherBox.addEventListener('mouseleave', function(){
- 	rotationSpeed();
+ 	rotationSpeed = 0.001;
  	console.log('mouse leave');
  });
