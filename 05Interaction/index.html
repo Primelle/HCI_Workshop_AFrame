@@ -25,17 +25,24 @@
         depth="1" 
         material="src: #wood"
         shadow 
-        animation_mouseenter="property:rotation;
+
+         animation_mouseenter="property:rotation;
         to:90 360 180;
         dur:2000;
         easing:linear;
+          startEvents: mouseenter; 
+
         loop:true"
         
         animation__mouseleave="property:rotation;
         to:0 360 0;
         dur:2000;
         easing:linear;
-        loop:true"> 
+          startEvents: mouseenter; 
+
+        loop:true"
+
+        > 
       </a-box>
       <a-box id="myOtherBox" 
         position="2 1 -3" 
