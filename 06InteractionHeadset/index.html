@@ -10,7 +10,6 @@
   <body>
     <a-scene background="color: #333333">
       <a-assets>
-          <img id="cowTexture" src="images/cowTexture.jpg" />
           <img id="wood" src="images/wood.jpg" />
           <img id="wood2" src="images/wood2.jpg" />
           <img id="grass" src="images/grass.jpg" />
@@ -18,13 +17,13 @@
 
       <a-camera>
         <a-entity id="mouseCursor"
-          cursor="fuse: true; fuseTimeout: 100">
+          cursor="fuse: true; fuseTimeout: 1500">
         </a-entity>
         <a-ring id="cursorRing" 
           position="0 0 -1"
           radius-inner= "0.02"
           radius-outer= "0.03"
-          material="#cowTexture; shader: flat">
+          material="color: red; shader: flat">
         </a-ring>
       </a-camera>
       
@@ -55,7 +54,7 @@
         width="3" 
         height="1" 
         depth="1" 
-        material="src: #wood2;"
+        src="#wood2"
         shadow>  
       </a-box>
       <a-plane id="ground"
