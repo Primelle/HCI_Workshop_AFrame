@@ -10,35 +10,22 @@
   <body>
     <a-scene background="color: #333333">
       <a-assets>
+          <img id="cowTexture" src="images/cowTexture.jpg" />
           <img id="wood" src="images/wood.jpg" />
           <img id="wood2" src="images/wood2.jpg" />
           <img id="grass" src="images/grass.jpg" />
-          <img id="earth" src="images/earth.jpg" />
-
       </a-assets>
 
       <a-camera>
         <a-entity id="mouseCursor"
-          cursor="fuse: true; fuseTimeout: 1500">
+          cursor="fuse: true; fuseTimeout: 100">
         </a-entity>
-
-       <!-- <a-sphere id="cursorRing"
-          position="0 0 -1"
-          material="src: #earth"
-          radius="0.04"
-          radius-inner="0.02"
-          radius-outer="0.03">
-
-
-         </a-sphere>-->
-         <a-ring id="cursorRing" 
+        <a-ring id="cursorRing" 
           position="0 0 -1"
           radius-inner= "0.02"
           radius-outer= "0.03"
-        
-          material="src: #wood; repeat: 10 10"
-          >
-        </a-ring>-
+          material="#cowTexture; shader: flat">
+        </a-ring>
       </a-camera>
       
       <a-box id="myBox" 
@@ -68,7 +55,7 @@
         width="3" 
         height="1" 
         depth="1" 
-        src="#wood2"
+        material="src: #wood2;"
         shadow>  
       </a-box>
       <a-plane id="ground"
